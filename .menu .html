@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Urban Bites | Menu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background: linear-gradient(135deg,
+        #fbc2eb,
+        #a6c1ee,
+        #fad0c4,
+        #c2e9fb
+    );
+    background-size:400% 400%;
+    animation: gradientMove 12s ease infinite;
+    padding:30px;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.header{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.header h1{
+    font-size:40px;
+    color:#fff;
+    text-shadow:
+        0 0 10px #ff9a9e,
+        0 0 25px #fad0c4,
+        0 0 40px #fbc2eb;
+}
+
+.header p{
+    font-size:15px;
+    color:#fff;
+    text-shadow:0 0 8px rgba(255,255,255,0.7);
+}
+
+.menu-container{
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap:20px;
+}
+
+.menu-card{
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(16px);
+    border-radius:22px;
+    padding:20px;
+    box-shadow:0 12px 35px rgba(0,0,0,0.25);
+    transition:0.3s;
+}
+
+.menu-card:hover{
+    transform:translateY(-6px) scale(1.02);
+}
+
+.menu-card h2{
+    text-align:center;
+    margin-bottom:15px;
+    color:#fff;
+    font-size:24px;
+    text-shadow:
+        0 0 8px #a6c1ee,
+        0 0 20px #fbc2eb;
+}
+
+.menu-item{
+    display:flex;
+    justify-content:space-between;
+    padding:8px 0;
+    border-bottom:1px dashed rgba(255,255,255,0.6);
+    color:#fff;
+    font-size:14px;
+}
+
+.menu-item:last-child{
+    border-bottom:none;
+}
+
+.price{
+    font-weight:600;
+    color:#fff;
+    text-shadow:0 0 6px rgba(255,255,255,0.7);
+}
+
+.footer{
+    text-align:center;
+    margin-top:30px;
+    color:#fff;
+    font-size:13px;
+    text-shadow:0 0 6px rgba(255,255,255,0.7);
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>🍴 Urban Bites</h1>
+    <p>Fresh • Delicious • Affordable</p>
+</div>
+
+<div class="menu-container">
+
+    <!-- Starters -->
+    <div class="menu-card">
+        <h2>🥗 Starters</h2>
+        <div class="menu-item"><span>Veg Spring Rolls</span><span class="price">₹120</span></div>
+        <div class="menu-item"><span>Paneer Tikka</span><span class="price">₹180</span></div>
+        <div class="menu-item"><span>Chicken Lollipop</span><span class="price">₹220</span></div>
+        <div class="menu-item"><span>French Fries</span><span class="price">₹100</span></div>
+    </div>
+
+    <!-- Main Course -->
+    <div class="menu-card">
+        <h2>🍛 Main Course</h2>
+        <div class="menu-item"><span>Butter Paneer Masala</span><span class="price">₹240</span></div>
+        <div class="menu-item"><span>Veg Biryani</span><span class="price">₹190</span></div>
+        <div class="menu-item"><span>Chicken Biryani</span><span class="price">₹260</span></div>
+        <div class="menu-item"><span>Dal Tadka</span><span class="price">₹160</span></div>
+    </div>
+
+    <!-- Fast Food -->
+    <div class="menu-card">
+        <h2>🍔 Fast Food</h2>
+        <div class="menu-item"><span>Veg Burger</span><span class="price">₹90</span></div>
+        <div class="menu-item"><span>Chicken Burger</span><span class="price">₹130</span></div>
+        <div class="menu-item"><span>Cheese Pizza</span><span class="price">₹220</span></div>
+        <div class="menu-item"><span>Pasta Alfredo</span><span class="price">₹200</span></div>
+    </div>
+
+    <!-- Desserts -->
+    <div class="menu-card">
+        <h2>🍰 Desserts</h2>
+        <div class="menu-item"><span>Chocolate Brownie</span><span class="price">₹120</span></div>
+        <div class="menu-item"><span>Ice Cream Scoop</span><span class="price">₹80</span></div>
+        <div class="menu-item"><span>Gulab Jamun</span><span class="price">₹70</span></div>
+        <div class="menu-item"><span>Cheesecake</span><span class="price">₹150</span></div>
+    </div>
+
+    <!-- Beverages -->
+    <div class="menu-card">
+        <h2>🥤 Beverages</h2>
+        <div class="menu-item"><span>Cold Coffee</span><span class="price">₹90</span></div>
+        <div class="menu-item"><span>Fresh Lime Soda</span><span class="price">₹60</span></div>
+        <div class="menu-item"><span>Milkshake</span><span class="price">₹110</span></div>
+        <div class="menu-item"><span>Soft Drinks</span><span class="price">₹50</span></div>
+    </div>
+
+</div>
+
+<div class="footer">
+    © 2026 Urban Bites | Taste That Glows ✨
+</div>
+
+</body>
+</html>
